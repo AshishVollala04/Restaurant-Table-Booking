@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/food.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents image tiling */
+    background-attachment: fixed; /* Keeps background fixed */
+    background-position: center; /* Center the image */
+    color: #333; /* Default text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Adds spacing on mobile devices */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow for modern UI */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* Increased spacing for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for better visibility */
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.85); /* Subtle transparent background */
+}
+
+input, select, button, .input {
+    padding: 14px; /* Increased padding for better usability */
+    font-size: 1rem;
+    border: 1px solid #ddd; /* Softer border color */
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s;
+    background: rgba(255, 255, 255, 0.8); /* Increased transparency for a sleek look */
+    color: #333;
+}
+
+input:focus, select:focus, .input:focus {
+    border-color: #a57d3e;
+    box-shadow: 0 0 10px rgba(165, 125, 62, 0.5); /* Softer focus glow */
+    outline: none;
+    transform: scale(1.02); /* Subtle scaling effect on focus */
+}
+
+button {
+    background-color: #a57d3e; /* Earthy gold button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #704b27; /* Darker brown on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Add hover shadow */
+}
+
+button:disabled {
+    background-color: #aaa; /* Gray color for disabled */
+    cursor: not-allowed;
+    box-shadow: none; /* Removes shadow when disabled */
+}
+
+h1 {
+    color: #ff5722; /* Vibrant orange color for the title */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Text shadow for better contrast */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+    color: #a57d3e; /* Earthy gold for subheadings */
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for the table layout */
+    gap: 12px;
+}
+
+.table-button {
+    padding: 12px;
+    font-size: 0.9rem;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.available {
+    background-color: #4caf50; /* Green for available */
+    color: white;
+}
+
+.available:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.03);
+}
+
+.booked {
+    background-color: #f44336; /* Red for booked */
+    color: white;
+    cursor: not-allowed;
+}
+
+.selected {
+    background-color: #0070f3; /* Blue for selected */
+    color: white;
+}
+
+.summary {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light gray for contrast */
+    color: #333;
+}
+
+.error-message {
+    color: #f44336; /* Red for errors */
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message {
+    color: #4caf50; /* Green for success */
+    text-align: center;
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible grid layout */
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
