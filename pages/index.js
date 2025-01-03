@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./styles.css"; // Ensure the path to your CSS file is correct
+
 
 export default function BookingForm() {
     const { register, handleSubmit, reset, watch } = useForm();
@@ -27,6 +27,7 @@ export default function BookingForm() {
                 const response = await axios.get(`http://localhost:3001/api/availability?date=${selectedDate}`);
                 setAvailableSlots(response.data);
             } catch (err) {
+                console.error("Failed to fetch availability:", err);
                 setFetchError("Failed to fetch available slots. Please try again.");
             } finally {
                 setLoadingSlots(false);
